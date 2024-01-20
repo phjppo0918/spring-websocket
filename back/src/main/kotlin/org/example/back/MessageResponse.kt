@@ -1,5 +1,5 @@
 package org.example.back
 
 data class MessageResponse (
-    val message : String,
+    val value : String,
 )

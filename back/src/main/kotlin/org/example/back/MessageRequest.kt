@@ -1,5 +1,5 @@
 package org.example.back
 
-data class Message(
+data class MessageRequest(
     val value : String
 )
