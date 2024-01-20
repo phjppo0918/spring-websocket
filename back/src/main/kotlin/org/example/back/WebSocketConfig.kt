@@ -11,8 +11,8 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 class WebSocketConfig : WebSocketMessageBrokerConfigurer{
 
     override fun registerStompEndpoints(registry: StompEndpointRegistry) {
-        registry.addEndpoint("/connect")
-            .setAllowedOriginPatterns("*")
+        registry.addEndpoint("/connect") // 연결 전송을 보낼 endpoint
+            .setAllowedOriginPatterns("*") // cors 허용 패턴
     }
 
     override fun configureMessageBroker(registry: MessageBrokerRegistry) {
