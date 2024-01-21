@@ -16,8 +16,7 @@
 					console.log("Received: " + message);
 					console.log("body value : " + message.body);
 
-					const p = JSON.parse(message.body).value;
-					messageLog.push(JSON.parse(p).value);
+					messageLog.push(JSON.parse(message.body).value);
 					messageLog = messageLog;
 				});
 			},
@@ -29,7 +28,7 @@
 		console.log("전송 성공!");
 		stompClient.publish({
 			destination: "/pub/hello",
-			body: JSON.stringify(`{"value" : "${text}"}`),
+			body: JSON.stringify({value: text})
 		});
 	}
 </script>

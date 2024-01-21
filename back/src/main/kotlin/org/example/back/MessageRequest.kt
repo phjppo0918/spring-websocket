@@ -1,5 +1,5 @@
 package org.example.back
 
 data class MessageRequest(
-    val value : String
+     @JsonProperty("value") val value : String
 )
